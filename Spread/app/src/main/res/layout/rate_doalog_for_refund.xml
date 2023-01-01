@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_dialogue_bg"
+        android:paddingHorizontal="@dimen/_10sdp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/ic_rectangle_line" />
+
+
+        <TextView
+            android:id="@+id/tvlabel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Refund Request"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"/>
+      <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:fontFamily="@font/inter_bold"
+            android:text="1,000 AED"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+           android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/tvlabel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvlabel1"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Your reason:"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"/>
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/firstEdit"
+            android:layout_below="@+id/tvlabel2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@drawable/edittextbackground"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="top"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_12ssp"/>
+
+
+        <TextView
+            android:id="@+id/tvlabel3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/firstEdit"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Influencer’s reason:"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/secondEdit"
+            android:layout_below="@+id/tvlabel3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@drawable/edittextbackground"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:gravity="top"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_12ssp"/>
+
+    </RelativeLayout>
+</RelativeLayout>

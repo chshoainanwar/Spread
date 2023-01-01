@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.setting.contracts.ContractDetailsFragment">
+
+    <include
+        android:id="@+id/rlTopBar"
+        layout="@layout/top_bar_business"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/rlPromotion"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_175sdp"
+        android:layout_below="@+id/rlTopBar"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/app_color"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingTop="@dimen/_20sdp">
+
+        <RelativeLayout
+            android:id="@+id/rlIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginEnd="-8dp"
+            android:background="@drawable/bg_pay_request"
+            android:elevation="@dimen/_5sdp"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <View
+                android:id="@+id/ivPay"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_25sdp"/>
+
+            <View
+                android:id="@+id/ivRequest"
+                android:layout_below="@+id/ivPay"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivImage"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/iv1" />
+
+            <RelativeLayout
+                android:id="@+id/rlupper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@id/ivImage">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Cameron Williamson"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:id="@+id/tvFollowers"
+                    android:layout_below="@id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="133K followers"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rlForRunning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="end"
+                >
+
+                <ImageView
+                    android:id="@+id/ivSnap"
+                    android:layout_toLeftOf="@+id/ivMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/iv_snap"
+                    android:layout_marginEnd="@dimen/_10sdp"/>
+
+                <ImageView
+                    android:id="@+id/ivMessage"
+                    android:layout_toStartOf="@+id/ivDialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/iv_message" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/ivDialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:src="@drawable/iv_edit_delete" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvPromotionLabel"
+            android:layout_below="@+id/rlTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Promotion video"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp" />
+
+        <TextView
+            android:id="@+id/tvStartDate"
+            android:layout_below="@+id/tvPromotionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_regular"
+            android:text="27 Aug 2022"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"/>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvEndDate"
+            android:layout_toEndOf="@+id/tvStartDate"
+            android:layout_below="@+id/tvPromotionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_regular"
+            android:text=" - 2 Sep 2022"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_alignParentBottom="true">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:text="$1,000"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tvRefunded"
+                android:layout_toRightOf="@+id/tvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:background="@drawable/bg_refunded"
+                android:text="Refunded"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:paddingTop="@dimen/_1sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_7sdp" />
+
+            <ImageView
+                android:id="@+id/ivVisit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/iv_visit" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlPromotion"
+        android:scrollbars="none">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/rlPay"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Your feedback"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <RatingBar
+                    android:id="@+id/tvYourRating"
+                    style="@style/Widget.AppCompat.RatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_toEndOf="@+id/ivUser"
+                    android:isIndicator="true"
+                    android:max="5"
+                    android:progressTint="@color/yellow_shade"
+                    android:rating="4"
+                    android:scaleX=".5"
+                    android:scaleY=".5"
+                    android:transformPivotX="0dp"
+                    android:transformPivotY="0dp" />
+
+                <TextView
+                    android:id="@+id/tvYourFeedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-25dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Amet minim mollit non deserunt ullamco est sit ajgb"
+                    android:textColor="#72777A"
+                    android:textSize="@dimen/_12sdp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginVertical="@dimen/_15sdp"
+                    android:background="@drawable/line" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Influencer’s feedback"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <RatingBar
+                    android:id="@+id/tvInfluencerRating"
+                    style="@style/Widget.AppCompat.RatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_toEndOf="@+id/ivUser"
+                    android:isIndicator="true"
+                    android:max="5"
+                    android:progressTint="@color/yellow_shade"
+                    android:rating="4"
+                    android:scaleX=".5"
+                    android:scaleY=".5"
+                    android:transformPivotX="0dp"
+                    android:transformPivotY="0dp" />
+
+                <TextView
+                    android:id="@+id/tvInfluencerFeedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-25dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. "
+                    android:textColor="#72777A"
+                    android:textSize="@dimen/_12sdp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginVertical="@dimen/_15sdp"
+                    android:background="@drawable/line" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvPalyerView"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_200sdp"
+                    android:layout_centerInParent="true"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginHorizontal="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/video2"
+                        android:scaleType="centerCrop"/>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/pause3"
+                        android:layout_gravity="center"/>
+
+                    <androidx.media3.ui.PlayerView
+                        android:id="@+id/videoView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        app:ad_marker_color="@color/purple_700"
+                        app:show_buffering="when_playing"
+                        app:show_shuffle_button="true"
+                        app:use_artwork="true" />
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvPalyer"
+                        android:layout_width="@dimen/_170sdp"
+                        android:layout_height="@dimen/_320sdp"
+                        android:layout_alignParentStart="true"
+                        app:cardCornerRadius="@dimen/_5sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/video2" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/pause2" />
+
+                        <androidx.media3.ui.PlayerView
+                            android:id="@+id/video"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            app:ad_marker_color="@color/purple_700"
+                            app:show_buffering="when_playing"
+                            app:show_shuffle_button="true"
+                            app:use_artwork="true" />
+
+                    </androidx.cardview.widget.CardView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+</RelativeLayout>

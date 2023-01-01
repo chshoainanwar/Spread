@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.setting.payments.PaymentFragment">
+
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/top_bar_business" />
+
+    <RelativeLayout
+        android:id="@+id/rvtop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_50sdp">
+
+        <TextView
+            android:id="@+id/tvLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Card"
+            android:textColor="#090A0A"
+            android:textSize="@dimen/_13sdp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvAddNewCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:fontFamily="@font/inter_medium"
+            android:text="Add new card"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/_12sdp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvpayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLabel"
+            android:layout_above="@id/cvaddcard2"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/cvaddcard2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:elevation="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_30sdp">
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:visibility="visible"
+            android:id="@+id/cvaddcard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:id="@+id/rlRecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_record1"
+                android:gravity="center"
+                android:padding="@dimen/_12sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivRecord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_vector_plus" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/ivRecord"
+                    android:text="Add new card"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

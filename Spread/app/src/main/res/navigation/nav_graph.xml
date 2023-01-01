@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.dev.spread.fragments.SplashFragment"
+        android:label="frag_splash"
+        tools:layout="@layout/frag_splash">
+        <action
+            android:id="@+id/actionSplashToLogin"
+            app:destination="@+id/loginFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.dev.spread.fragments.auth.LoginFragment"
+        android:label="frag_login"
+        tools:layout="@layout/frag_login">
+        <action
+            android:id="@+id/actionLoginToRegisterAs"
+            app:destination="@+id/registerAsFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_forgotFragment2"
+            app:destination="@id/forgotFragment2" />
+
+        <action
+            android:id="@+id/actionLoginToInfluencer"
+            app:destination="@+id/influencer" />
+        <action
+            android:id="@+id/action_loginFragment_to_contractsFragment"
+            app:destination="@id/contractsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/registerAsFragment"
+        android:name="com.dev.spread.fragments.auth.RegisterAsFragment"
+        android:label="frag_register_as"
+        tools:layout="@layout/frag_register_as">
+        <action
+            android:id="@+id/actionRegisterAsToSignUp"
+            app:destination="@+id/signUpFragment" />
+        <action
+            android:id="@+id/action_registerAsFragment_to_dashboard2"
+            app:destination="@id/dashboard2" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.dev.spread.fragments.auth.SignUpFragment"
+        android:label="frag_sign_up"
+        tools:layout="@layout/frag_sign_up">
+        <action
+            android:id="@+id/actionSignUpToLogin"
+            app:destination="@+id/loginFragment" />
+        <action
+            android:id="@+id/actionSignUpToOtp"
+            app:destination="@+id/otpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tradeLicenseFragment"
+        android:name="com.dev.spread.fragments.auth.TradeLicenseFragment"
+        android:label="fragment_trade_license"
+        tools:layout="@layout/fragment_trade_license">
+        <action
+            android:id="@+id/actionTradeLicenseToSignUp"
+            app:destination="@+id/signUpFragment" />
+        <action
+            android:id="@+id/actionTradeLicenseToScan"
+            app:destination="@+id/scanFragment" />
+        <action
+            android:id="@+id/actionTradeLicenseToIDCard"
+            app:destination="@+id/IDCardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="com.dev.spread.fragments.auth.ScanFragment"
+        android:label="frag_scan"
+        tools:layout="@layout/frag_scan">
+        <action
+            android:id="@+id/actionScanToTradeLicense"
+            app:destination="@+id/tradeLicenseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/IDCardFragment"
+        android:name="com.dev.spread.fragments.auth.IDCardFragment"
+        android:label="frag_i_d_card"
+        tools:layout="@layout/frag_i_d_card">
+        <action
+            android:id="@+id/actionIDCardToScanID"
+            app:destination="@+id/scanIdCardFragment" />
+        <action
+            android:id="@+id/actionIDCardToTradeLicense"
+            app:destination="@+id/tradeLicenseFragment" />
+        <action
+            android:id="@+id/actionIDCardToBankInfo"
+            app:destination="@+id/bankInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scanIdCardFragment"
+        android:name="com.dev.spread.fragments.auth.ScanIdCardFragment"
+        android:label="frag_scan_id_card"
+        tools:layout="@layout/frag_scan_id_card" />
+    <fragment
+        android:id="@+id/forgotFragment2"
+        android:name="com.dev.spread.fragments.auth.ForgotFragment"
+        android:label="frag_forgot"
+        tools:layout="@layout/frag_forgot">
+        <action
+            android:id="@+id/action_forgotFragment2_to_otpFragment"
+            app:destination="@id/otpFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/toVerifiedFrag"
+        android:name="com.dev.spread.fragments.auth.VerifiedFragment"
+        android:label="frag_forgot"
+        tools:layout="@layout/frag_verified_pass">
+        <action
+            android:id="@+id/actionToResetPassword"
+            app:destination="@id/addpasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/otpFragment"
+        android:name="com.dev.spread.fragments.auth.OtpFragment"
+        android:label="frag_otp"
+        tools:layout="@layout/frag_otp">
+        <action
+            android:id="@+id/actionToVerified"
+            app:destination="@id/toVerifiedFrag" />
+        <action
+            android:id="@+id/actionOtpToAddPassword"
+            app:destination="@id/addpasswordFragment" />
+
+        <action
+            android:id="@+id/actionOtpToWelcome"
+            app:destination="@+id/welcomeFragment" />
+        <action
+            android:id="@+id/actionOtpToSnapchat"
+            app:destination="@+id/snapchatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addpasswordFragment"
+        android:name="com.dev.spread.fragments.auth.AddpasswordFragment"
+        android:label="frag_addpassword"
+        tools:layout="@layout/frag_addpassword">
+        <action
+            android:id="@+id/action_addpasswordToLogin"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/influencer"
+        android:name="com.dev.spread.fragments.influencer.Influencer"
+        android:label="frag_influencer"
+        tools:layout="@layout/frag_influencer">
+        <action
+            android:id="@+id/action_influencer_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_influencer_to_searchFragment2"
+            app:destination="@id/searchFragment2" />
+        <action
+            android:id="@+id/actionInfluencerToCurrentAds"
+            app:destination="@id/currentAdsFragment" />
+        <action
+            android:id="@+id/action_influencer_to_message2"
+            app:destination="@id/message2" />
+        <action
+            android:id="@+id/action_influencerToDetails"
+            app:destination="@id/messageDetail" />
+        <action
+            android:id="@+id/actionInfluencerToCreateAds"
+            app:destination="@id/createAdsFragment" />
+        <action
+            android:id="@+id/actionInfluencerToContracts"
+            app:destination="@id/contractsFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.dev.spread.fragments.setting.SettingFragment"
+        android:label="frag_setting"
+        tools:layout="@layout/frag_setting">
+        <action
+            android:id="@+id/action_settingFragmentToProfile"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_settingFragmentToPassword"
+            app:destination="@id/passwordFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_languageFragment"
+            app:destination="@id/languageFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_LegalFragment"
+            app:destination="@id/legalFragment" />
+        <action
+            android:id="@+id/actionSettingToReviews"
+            app:destination="@id/reviewsFragment" />
+        <action
+            android:id="@+id/actionSettingToContracts"
+            app:destination="@id/contractsFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_PaymentFragment"
+            app:destination="@id/paymentFragment" />
+        <action
+            android:id="@+id/actionSettingFragmentToLogin"
+            app:destination="@id/loginFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.dev.spread.fragments.setting.profile.ProfileFragment"
+        android:label="frag_profile"
+        tools:layout="@layout/frag_profile">
+        <action
+            android:id="@+id/action_profileFragmentToEditProfile"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragmentToNewTradeLicense"
+            app:destination="@id/newLicenseFragment" />
+        <action
+            android:id="@+id/action_profileFragmentToNewIDCard"
+            app:destination="@id/newIdCardFragment" />
+        <action
+            android:id="@+id/action_profileFragmentToEditPasswordFragment"
+            app:destination="@id/editPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.dev.spread.fragments.setting.profile.EditProfileFragment"
+        android:label="frag_edit"
+        tools:layout="@layout/frag_edit">
+        <action
+            android:id="@+id/action_EditProfileFragmentToSetting"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.dev.spread.fragments.setting.password.PasswordFragment"
+        android:label="frag_password"
+        tools:layout="@layout/frag_password">
+        <action
+            android:id="@+id/action_passwordFragmentToEditPassword"
+            app:destination="@id/editPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editPasswordFragment"
+        android:name="com.dev.spread.fragments.setting.password.EditPasswordFragment"
+        android:label="frag_edit_password"
+        tools:layout="@layout/frag_edit_password">
+        <action
+            android:id="@+id/action_editPasswordFragmentToSetting"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newIdCardFragment"
+        android:name="com.dev.spread.fragments.setting.profile.NewIdCardFragment"
+        android:label="frag_new_id_card"
+        tools:layout="@layout/frag_new_id_card">
+        <action
+            android:id="@+id/action_newIDCardToScanCard"
+            app:destination="@id/scanIdCardFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/newLicenseFragment"
+        android:name="com.dev.spread.fragments.setting.profile.NewLicenseFragment"
+        android:label="frag_new_license"
+        tools:layout="@layout/frag_new_license">
+
+        <action
+            android:id="@+id/action_newTradeToScanLicense"
+            app:destination="@+id/scanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.dev.spread.fragments.setting.language.LanguageFragment"
+        android:label="frag_language"
+        tools:layout="@layout/frag_language" />
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.dev.spread.fragments.setting.help.HelpFragment"
+        android:label="frag_help"
+        tools:layout="@layout/frag_help">
+        <action
+            android:id="@+id/action_helpFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.dev.spread.fragments.auth.WelcomeFragment"
+        android:label="frag_welcome"
+        tools:layout="@layout/frag_welcome">
+        <action
+            android:id="@+id/actionWelcomeToCreateAds"
+            app:destination="@id/createAdsFragment" />
+        <action
+            android:id="@+id/actionWelcomeToInfluencerDashboard"
+            app:destination="@id/influencer"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/actionWelcomeToWelconme"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/actionWelcomeToContracts"
+            app:destination="@id/contractsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAdsFragment"
+        android:name="com.dev.spread.fragments.craeteads.CreateAdsFragment"
+        android:label="frag_create_ads"
+        tools:layout="@layout/frag_create_ads">
+        <action
+            android:id="@+id/actionCreateAdsToWorkingProgress"
+            app:destination="@id/progressFragment" />
+        <action
+            android:id="@+id/actionCreateAdsTCurrentAds"
+            app:destination="@id/currentAdsFragment" />
+        <action
+            android:id="@+id/actionCreateAdsToRecordVideo"
+            app:destination="@id/recordVideoFragment" />
+        <action
+            android:id="@+id/actionCreateAdsToSame"
+            app:destination="@id/createAdsFragment" />
+        <action
+            android:id="@+id/actionCreateAdsToSelectPrice"
+            app:destination="@id/selectPriceFragment" />
+        <action
+            android:id="@+id/actionCreateAdsTPastVideos"
+            app:destination="@id/pastVideosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment2"
+        android:name="com.dev.spread.fragments.influencer.SearchFragment"
+        android:label="frag_search"
+        tools:layout="@layout/frag_search" />
+    <fragment
+        android:id="@+id/progressFragment"
+        android:name="com.dev.spread.fragments.ProgressFragment"
+        android:label="frag_progress"
+        tools:layout="@layout/frag_progress">
+        <action
+            android:id="@+id/actionWorkingProgressToLogin"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recordVideoFragment"
+        android:name="com.dev.spread.fragments.craeteads.RecordVideoFragment"
+        android:label="frag_record_video"
+        tools:layout="@layout/frag_record_video" />
+    <fragment
+        android:id="@+id/legalFragment"
+        android:name="com.dev.spread.fragments.setting.LegalFragment"
+        android:label="frag_legal"
+        tools:layout="@layout/frag_legal" />
+    <fragment
+        android:id="@+id/selectPriceFragment"
+        android:name="com.dev.spread.fragments.craeteads.SelectPriceFragment"
+        android:label="frag_select_price"
+        tools:layout="@layout/frag_select_price">
+        <action
+            android:id="@+id/actionPriceFragmentToWelcome"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/currentAdsFragment"
+        android:name="com.dev.spread.fragments.currentads.CurrentAdsFragment"
+        android:label="frag_current_ads"
+        tools:layout="@layout/frag_current_ads">
+        <action
+            android:id="@+id/actionCurrentAdsToWelcome"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/actionCurrentAdsToCreateAds"
+            app:destination="@id/createAdsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/message2"
+        android:name="com.dev.spread.fragments.messages.Message"
+        android:label="fragment_messages"
+        tools:layout="@layout/fragment_messages">
+        <action
+            android:id="@+id/action_message2_to_messageDetail"
+            app:destination="@id/messageDetail" />
+        <action
+            android:id="@+id/action_message2_to_emptyMessage"
+            app:destination="@id/emptyMessage" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageDetail"
+        android:name="com.dev.spread.fragments.messages.MessageDetail"
+        android:label="fragment_message_detail"
+        tools:layout="@layout/fragment_message_detail">
+        <action
+            android:id="@+id/action_messageDetail_to_shareLocation2"
+            app:destination="@id/shareLocation2" />
+        <action
+            android:id="@+id/action_messageDetail_to_paymentInfo"
+            app:destination="@id/paymentInfo" />
+        <action
+            android:id="@+id/action_messageDetail_to_ContractDetails"
+            app:destination="@id/contractDetailsFragment" />
+        <action
+            android:id="@+id/action_messageDetail_to_influencserdashboared"
+            app:destination="@id/influencer"
+            />
+        <action
+            android:id="@+id/action_messageDetail_to_Contracts"
+            app:destination="@id/contractsFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_messageDetail_to_RecordVideo"
+            app:destination="@id/recordVideoFragment" />
+        <action
+            android:id="@+id/actionMessageDetailToRating"
+            app:destination="@id/reviewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shareLocation2"
+        android:name="com.dev.spread.fragments.ShareLocation"
+        android:label="ShareLocation" />
+    <fragment
+        android:id="@+id/pastVideosFragment"
+        android:name="com.dev.spread.fragments.pastads.PastVideosFragment"
+        android:label="frag_past_videos"
+        tools:layout="@layout/frag_past_videos">
+
+        <action
+            android:id="@+id/actionPastVideoToCreateAds"
+            app:destination="@id/createAdsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/paymentInfo"
+        android:name="com.dev.spread.fragments.PaymentInfo"
+        android:label="fragment_payment_info"
+        tools:layout="@layout/fragment_payment_info">
+        <action
+            android:id="@+id/action_paymentInfo_to_selectedPaymentMethod"
+            app:destination="@id/selectedPaymentMethod" />
+        <action
+            android:id="@+id/actionPaymentInfoProgress"
+            app:destination="@id/progressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewsFragment"
+        android:name="com.dev.spread.fragments.setting.reviews.ReviewsFragment"
+        android:label="fragment_reviews"
+        tools:layout="@layout/fragment_reviews">
+
+    </fragment>
+    <fragment
+        android:id="@+id/contractDetailsFragment"
+        android:name="com.dev.spread.fragments.setting.contracts.ContractDetailsFragment"
+        android:label="frag_contract_dertails"
+        tools:layout="@layout/frag_contract_dertails">
+        <action
+            android:id="@+id/actionContractToWelcome"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/actionContractToRequestRefund"
+            app:destination="@id/requestRefundFragment" />
+        <action
+            android:id="@+id/actionContractDetailsToMessages"
+            app:destination="@id/message2" />
+        <action
+            android:id="@+id/actionContractDetailsToMessagesDetails"
+            app:destination="@id/messageDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/contractsFragment"
+        android:name="com.dev.spread.fragments.setting.contracts.ContractsFragment"
+        android:label="frag_contracts"
+        tools:layout="@layout/frag_contracts">
+
+        <action
+            android:id="@+id/actionContractToDetails"
+            app:destination="@id/contractDetailsFragment" />
+        <action
+            android:id="@+id/actionContractToMessages"
+            app:destination="@id/message2" />
+        <action
+            android:id="@+id/actionContractToMessageDetails"
+            app:destination="@id/messageDetail" />
+        <action
+            android:id="@+id/actionContractToSettings"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/actionContractToReviews"
+            app:destination="@id/reviewsFragment" />
+        <action
+            android:id="@+id/actionContractToContracts"
+            app:destination="@id/contractsFragment2" />
+        <action
+            android:id="@+id/actionContractToContractsabc"
+            app:destination="@id/contractsFragment2" />
+        <action
+            android:id="@+id/actionContractToInfluencer"
+            app:destination="@id/influencer" />
+        <action
+            android:id="@+id/action_contractsFragment_to_createAdsFragment"
+            app:destination="@id/createAdsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/contractsFragment2"
+        android:name="com.dev.spread.fragments.setting.contracts.ContractsFragment"
+        android:label="frag_contracts"
+        tools:layout="@layout/frag_contracts">
+
+        <action
+            android:id="@+id/actionContractToDetails"
+            app:destination="@id/contractDetailsFragment" />
+        <action
+            android:id="@+id/actionContractToMessages"
+            app:destination="@id/message2" />
+        <action
+            android:id="@+id/actionContractToMessageDetails"
+            app:destination="@id/messageDetail" />
+        <action
+            android:id="@+id/actionContractToSettings"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/actionContractToReviews"
+            app:destination="@id/reviewsFragment" />
+        <action
+            android:id="@+id/actionContractToContracts"
+            app:destination="@id/contractsFragment" />
+        <action
+            android:id="@+id/actionContract2ToContractsabc"
+            app:destination="@id/contractsFragment" />
+        <action
+            android:id="@+id/actionContractToInfluencer"
+            app:destination="@id/influencer" />
+        <action
+            android:id="@+id/action_contractsFragment_to_createAdsFragment"
+            app:destination="@id/createAdsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.dev.spread.fragments.setting.payments.PaymentFragment"
+        android:label="frag_payment"
+        tools:layout="@layout/frag_payment" />
+    <fragment
+        android:id="@+id/selectedPaymentMethod"
+        android:name="com.dev.spread.fragments.SelectedPaymentMethod"
+        android:label="fragment_selected_payment_method"
+        tools:layout="@layout/fragment_selected_payment_method">
+        <action
+            android:id="@+id/action_selectedPaymentMethod_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+        <action
+            android:id="@+id/action_selectedPaymentMethod_to_jobofferSent"
+            app:destination="@id/jobofferSent" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestRefundFragment"
+        android:name="com.dev.spread.fragments.setting.contracts.RequestRefundFragment"
+        android:label="frag_request_refund"
+        tools:layout="@layout/frag_request_refund">
+
+        <action
+            android:id="@+id/actionRequestRefundToWelcome"
+            app:destination="@id/welcomeFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/snapchatFragment"
+        android:name="com.dev.spread.fragments.auth.SnapchatFragment"
+        android:label="fragment_snapchat"
+        tools:layout="@layout/fragment_snapchat">
+        <action
+            android:id="@+id/actionSnapToToIDCard"
+            app:destination="@id/IDCardFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashboard2"
+        android:name="com.dev.spread.fragments.dashboard.Dashboard"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/emptyMessage"
+        android:name="com.dev.spread.fragments.messages.EmptyMessage"
+        android:label="EmptyMessage" />
+    <fragment
+        android:id="@+id/jobofferSent"
+        android:name="com.dev.spread.fragments.JobofferSent"
+        android:label="JobofferSent">
+        <action
+            android:id="@+id/action_jobofferSent_to_messageDetail"
+            app:destination="@id/messageDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/bankInfoFragment"
+        android:name="com.dev.spread.fragments.auth.BankInfoFragment"
+        android:label="fragment_blank_info"
+        tools:layout="@layout/fragment_blank_info">
+        <action
+            android:id="@+id/actionBankInfoToProfilePhoto"
+            app:destination="@+id/profilePhotoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilePhotoFragment"
+        android:name="com.dev.spread.fragments.auth.ProfilePhotoFragment"
+        android:label="fragment_profile_photo"
+        tools:layout="@layout/fragment_profile_photo" >
+        <action
+            android:id="@+id/actionProfileToWelcome"
+            app:destination="@+id/welcomeFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_10sdp"
+    tools:context=".fragments.setting.profile.ProfileFragment">
+
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/top_bar_business" />
+
+    <RelativeLayout
+        android:id="@+id/rlLabel3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBar"
+        android:layout_marginTop="@dimen/_15sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="#090A0A"
+            android:textSize="@dimen/_15sdp"
+            android:fontFamily="@font/inter_bold" />
+
+        <ImageView
+            android:id="@+id/ivprofileEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_edit_icon" />
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/rlName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlLabel3"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/bg_field"
+        android:backgroundTint="#F2F4F5"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/tvNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:fontFamily="@font/inter_regular"
+            android:textColor="@color/text_hint_color"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvNameLabel"
+            android:text="Cameron Williamson"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/inter_regular" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlName"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/bg_field"
+        android:backgroundTint="#F2F4F5"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/tvEmailLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="@color/text_hint_color"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/inter_regular"/>
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvEmailLabel"
+            android:text="CameronWilliamson@gmail.com"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/inter_regular"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlLabel4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlEmail"
+        android:layout_marginTop="@dimen/_15sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="#090A0A"
+            android:textSize="@dimen/_15sdp"
+            android:fontFamily="@font/inter_bold"/>
+
+        <ImageView
+            android:id="@+id/ivpasswordEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_edit_icon" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlLabel4"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/bg_field"
+        android:backgroundTint="#F2F4F5"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/tvhintpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_regular"
+            android:text="Password"
+            android:textColor="@color/text_hint_color"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/tvpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvhintpassword"
+            android:text="*******"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:fontFamily="@font/inter_regular"
+            android:textSize="@dimen/_12sdp" />
+
+    </RelativeLayout>
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvTradeLabel"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/rlEmail"-->
+<!--        android:layout_marginTop="@dimen/_15sdp"-->
+<!--        android:text="Trade license and ID card"-->
+<!--        android:textColor="#090A0A"-->
+<!--        android:textSize="@dimen/_15sdp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/rlTrade"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/tvTradeLabel"-->
+<!--        android:layout_marginTop="@dimen/_15sdp"-->
+<!--        android:background="@drawable/bg_profile"-->
+<!--        android:paddingHorizontal="@dimen/_10sdp"-->
+<!--        android:paddingVertical="@dimen/_15sdp">-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/ivOwner"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:src="@drawable/ic_iv_trade" />-->
+
+<!--        <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--            android:id="@+id/llTrade"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/_10sdp"-->
+<!--            android:layout_toLeftOf="@+id/ivTradeArrow"-->
+<!--            android:layout_toRightOf="@+id/ivOwner"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Trade license"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="@dimen/_12sdp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="@dimen/_5sdp"-->
+<!--                android:text="You can change "-->
+<!--                android:textColor="@color/text_hint_color"-->
+<!--                android:textSize="@dimen/_12sdp"-->
+<!--                android:textStyle="normal" />-->
+
+<!--        </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/ivTradeArrow"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:src="@drawable/ic_iv_right_arrow" />-->
+
+<!--    </RelativeLayout>-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/rlIDCard"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/rlTrade"-->
+<!--        android:layout_marginTop="@dimen/_15sdp"-->
+<!--        android:background="@drawable/bg_profile"-->
+<!--        android:paddingHorizontal="@dimen/_10sdp"-->
+<!--        android:paddingVertical="@dimen/_15sdp">-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/ivIdCard"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:src="@drawable/ic_iv_id" />-->
+
+<!--        <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--            android:id="@+id/llIDCard"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/_10sdp"-->
+<!--            android:layout_toRightOf="@+id/ivIdCard"-->
+<!--            android:layout_toLeftOf="@+id/ivIDCardArrow"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="ID card"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="@dimen/_12sdp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="@dimen/_5sdp"-->
+<!--                android:text="You can change "-->
+<!--                android:textColor="@color/text_hint_color"-->
+<!--                android:textSize="@dimen/_12sdp"-->
+<!--                android:textStyle="normal" />-->
+
+<!--        </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/ivIDCardArrow"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:src="@drawable/ic_iv_right_arrow" />-->
+
+<!--    </RelativeLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/rlEdit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:background="@drawable/bg_button"
+        android:gravity="center">
+
+
+        <ImageView
+            android:id="@+id/ivLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_iv_edit" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/ivLogout"
+            android:text="Edit"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

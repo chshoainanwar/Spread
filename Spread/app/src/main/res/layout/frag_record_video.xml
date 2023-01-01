@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightBlack"
+    tools:context=".fragments.craeteads.RecordVideoFragment">
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <RelativeLayout
+        android:id="@+id/viewForCamNotBlur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlBottom"
+        android:layout_below="@+id/ivBack"
+        android:background="@drawable/ic_acssc"
+        android:layout_toStartOf="@+id/viewEnd"
+        android:layout_toEndOf="@+id/viewStart"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/viewStart"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white_transparent" />
+
+    <RelativeLayout
+        android:id="@+id/viewEnd"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white_transparent" />
+
+    <RelativeLayout
+        android:id="@+id/viewBottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/viewForCamNotBlur"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/viewEnd"
+        android:layout_toEndOf="@+id/viewStart"
+        android:background="@color/white_transparent" />
+
+    <RelativeLayout
+        android:id="@+id/viewTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/viewForCamNotBlur"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/viewEnd"
+        android:layout_toEndOf="@+id/viewStart"
+        android:background="@color/white_transparent" />
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="?actionBarSize"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:padding="@dimen/_15sdp"
+        android:src="@drawable/ic_iv_back"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/rlBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSeconds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:background="@drawable/bg_button"
+            android:backgroundTint="@color/app_color"
+            android:fontFamily="@font/inter_medium"
+            android:text="30 Sec"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <RelativeLayout
+            android:id="@+id/rlRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <com.emrekose.recordbutton.RecordButton
+                android:id="@+id/recordBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:buttonGap="10dp"
+                app:maxMilisecond="30000"
+                app:progressColor="@color/app_color"
+                app:progressEmptyColor="@color/border_color"
+                app:progressStroke="15"
+                app:recordIcon="@drawable/iv_circle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivResume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/resume"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/ivTick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/iv_tick"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

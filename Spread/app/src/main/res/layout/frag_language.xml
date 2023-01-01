@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/_10sdp"
+    tools:context=".fragments.setting.language.LanguageFragment">
+
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/top_bar_business" />
+
+
+    <TextView
+        android:id="@+id/tvLabel3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBar"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="Language"
+        android:fontFamily="@font/inter_bold"
+        android:textColor="#090A0A"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLabel3"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:id="@+id/rlEnglish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivUKflag"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/iv_english" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@id/ivUKflag"
+                android:text="English"
+                android:fontFamily="@font/inter_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+
+
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewline"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_below="@id/rlEnglish"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="#E3E5E6" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewline"
+            android:layout_marginTop="@dimen/_5sdp"
+            >
+
+
+            <ImageView
+                android:id="@+id/ivUaeflag"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/iv_arabic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/ivUaeflag"
+                android:text="Arabic"
+                android:fontFamily="@font/inter_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/rgLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/rbenglish"
+                android:layout_width="wrap_content"
+                android:buttonTint="@color/app_color"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/app_color"
+                android:layout_marginTop="@dimen/_13sdp"/>
+
+
+        </RadioGroup>
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

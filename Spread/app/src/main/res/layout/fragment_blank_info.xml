@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.auth.BankInfoFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:src="@drawable/ic_iv_back" />
+    <RelativeLayout
+        android:layout_below="@+id/ivBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_bold"
+            android:text="Bank Information"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvBank"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:text="Connect your bank account."
+            android:textColor="@color/text_hint_color"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAccountType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDesc"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Account type"
+            android:textColor="@color/text_hint_color"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal" />
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llAccountType"
+            android:layout_below="@+id/tvAccountType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rlCurrent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_field">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCurrent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:paddingHorizontal="@dimen/_25sdp"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlSavings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/bg_bank">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSavings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:paddingHorizontal="@dimen/_25sdp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Savings"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <include
+            android:id="@+id/rlBankName"
+            layout="@layout/input_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llAccountType"
+            android:layout_marginTop="@dimen/_17sdp" />
+        <include
+            android:id="@+id/rlAccountName"
+            layout="@layout/input_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlBankName"
+            android:layout_marginTop="@dimen/_12sdp" />
+        <include
+            android:id="@+id/rlAccountNumber"
+            layout="@layout/input_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlAccountName"
+            android:layout_marginTop="@dimen/_12sdp" />
+        <include
+            android:id="@+id/rlIBAN"
+            layout="@layout/input_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlAccountNumber"
+            android:layout_marginTop="@dimen/_12sdp" />
+        <include
+            android:id="@+id/rlNext"
+            layout="@layout/field_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_10sdp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

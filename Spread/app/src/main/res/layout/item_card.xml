@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_card"
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_card_pattern"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="@dimen/_10sdp"/>
+
+
+    <TextView
+        android:id="@+id/tvlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Card cannot be deleted while you have a running contract."
+        android:layout_below="@id/iv_card"
+        android:visibility="gone"
+        android:textSize="@dimen/_10sdp"
+        android:fontFamily="@font/inter_regular"
+        android:textColor="@color/black"/>
+    <ImageView
+        android:id="@+id/ivBin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_vector_bin"
+        android:layout_below="@id/iv_card"
+        android:layout_alignParentEnd="true"/>
+
+
+</RelativeLayout>

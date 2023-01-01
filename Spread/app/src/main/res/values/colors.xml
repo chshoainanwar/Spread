@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_transparent">#BFFFFFFF</color>
+    <color name="app_color">#0760F0</color>
+    <color name="app_color_dark">#0757D8</color>
+    <color name="view_color">#190760F0</color>
+    <color name="view_bar">#E9E9E9</color>
+    <color name="view_bar2">#F2F4F5</color>
+    <color name="time">#72777A</color>
+    <color name="yellow_shade">#FFDF0E</color>
+    <color name="hint_color">#9D9D9D</color>
+    <color name="job_offer">#090A0A</color>
+    <color name="bg_running">#120760F0</color>
+    <color name="bg_cancel">#C4C4C4</color>
+    <color name="yellow">#FFFC00</color>
+    <color name="red_text">#EA1D25</color>
+
+    <color name="etBorderColor">#CBCBCB</color>
+    <color name="border_color">#E3E5E5</color>
+    <color name="selected_color">#133F4C</color>
+    <color name="text_hint_color">#72777A</color>
+    <color name="box_color">#F2F4F5</color>
+    <color name="card_backgroud">#E3E5E5</color>
+    <color name="bg_search">#F2F4F5</color>
+    <color name="clickedbg">#120760F0</color>
+    <color name="red">#FF4A4A</color>
+    <color name="parrot">#2DAE18</color>
+    <color name="or">#72777A</color>
+    <color name="deleted">#EFEFEF</color>
+</resources>

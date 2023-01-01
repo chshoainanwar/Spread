@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash"
+    android:gravity="center"
+    tools:context=".fragments.SplashFragment">
+
+    <TextView
+        android:id="@+id/tvSpread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/merriweather_black"
+        android:gravity="center"
+        android:text="Spread"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_60sdp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSpread"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/merriweather_black"
+        android:gravity="center"
+        android:text="Win in Business"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="normal" />
+
+</RelativeLayout>

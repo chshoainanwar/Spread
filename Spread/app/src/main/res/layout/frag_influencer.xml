@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/_5sdp"
+    android:animateLayoutChanges="true"
+    android:animationCache="true"
+    android:paddingHorizontal="@dimen/_5sdp"
+    tools:context=".fragments.influencer.Influencer">
+
+    <RelativeLayout
+        android:id="@+id/rlTopicons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp">
+
+
+        <RelativeLayout
+            android:id="@+id/rlSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_setting" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_8sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:layout_alignEnd="@+id/ivSettings"
+                android:background="@drawable/bg_notifed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivSettings"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Settings"
+                android:textSize="@dimen/_6sdp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlAdvertisement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toLeftOf="@+id/rlContracts">
+
+            <ImageView
+                android:id="@+id/ivAdvertisement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_speaker" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_8sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:layout_alignEnd="@+id/ivAdvertisement"
+                android:background="@drawable/bg_notifed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivAdvertisement"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Advertisement"
+                android:textSize="@dimen/_6sdp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlContracts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:layout_toLeftOf="@+id/rlMessages">
+
+            <ImageView
+                android:id="@+id/ivContract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_contract" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_8sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:layout_alignEnd="@+id/ivContract"
+                android:background="@drawable/bg_notifed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivContract"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Contracts"
+                android:textSize="@dimen/_6sdp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlMessages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:id="@+id/ivMessages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_messages" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_8sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:layout_alignEnd="@+id/ivMessages"
+                android:background="@drawable/bg_notifed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivMessages"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Messages"
+                android:textSize="@dimen/_6sdp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_70sdp"
+        android:fontFamily="@font/inter_bold"
+        android:text="Top 3"
+        android:textColor="#090A0A"
+        android:textSize="@dimen/_20sdp" />
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMain">
+
+        <TextView
+            android:id="@+id/tvBest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Options keep changing until the best 3 are found."
+            android:textSize="@dimen/_10sdp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvSoon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Influencers will appear soon."
+            android:textSize="@dimen/_10sdp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvInfluencer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/rlBottom"
+            android:layout_below="@id/input"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBest"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_field"
+            android:backgroundTint="#F2F4F5"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/inter_regular"
+                android:paddingVertical="@dimen/_12sdp"
+                android:text="Search"
+                android:textColor="#72777A"
+                android:textSize="@dimen/_12sdp" />
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/iv_search" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlWaiting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/ivClock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_clock" />
+
+            <TextView
+                android:id="@+id/tvlabel3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivClock"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_90sdp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Waiting "
+                android:textColor="#090A0A"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvlabel4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvlabel3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Waiting for influencers."
+                android:textSize="@dimen/_10sdp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="@dimen/_10sdp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvUse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_regular"
+                android:text="How to use:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_7ssp" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/bottomlabel1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvUse"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="0dp">
+
+                <ImageView
+                    android:id="@+id/dot1"
+                    android:layout_width="@dimen/_3sdp"
+                    android:layout_height="@dimen/_3sdp"
+                    android:src="@drawable/ic_baseline_circle_24"
+                    android:textSize="@dimen/_7ssp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="Tap a profile to message and keep an influencer."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_7ssp" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/bottomlabel2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bottomlabel1"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="0dp">
+
+                <ImageView
+                    android:id="@+id/dot2"
+                    android:layout_width="@dimen/_3sdp"
+                    android:layout_height="@dimen/_3sdp"
+                    android:src="@drawable/ic_baseline_circle_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="Swipe right to unmatch and replace an influencer."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_7ssp" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

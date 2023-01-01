@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivUser"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/persontwo"
+                android:layout_marginStart="@dimen/_10sdp"/>
+
+            <TextView
+                android:id="@+id/tvNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_toRightOf="@+id/ivUser"
+                android:text="Jane Cooper"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp" />
+
+
+            <TextView
+                android:id="@+id/messageCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@+id/tvNumber"
+                android:background="@drawable/circle_shape_two"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_19sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                />
+
+
+
+
+            <TextView
+                android:id="@+id/tvTest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvNumber"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/ivUser"
+                android:text="Sorry i’ii be lateabout 15 minutes"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+
+
+
+            <TextView
+                android:id="@+id/tvDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="8:40AM"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/time" />
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+</layout>

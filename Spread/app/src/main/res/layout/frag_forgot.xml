@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/_10sdp"
+    tools:context=".fragments.auth.ForgotFragment">
+
+    <ImageView
+        android:id="@+id/ivBackArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_15ssp"
+        android:src="@drawable/ic_arrow_back_" />
+
+    <ImageView
+        android:id="@+id/ivIllustration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_illustration"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_50sdp"/>
+
+    <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivIllustration"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/inter_regular"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="You’ll recieve a verification code" />
+    <TextView
+        android:id="@+id/tvLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="in your email."
+        android:layout_below="@id/tvLabel"
+        android:fontFamily="@font/inter_regular"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_5sdp"/>
+
+    <include
+        android:id="@+id/etEmail"
+        layout="@layout/input_field"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/tvLabel2"
+        android:layout_marginTop="@dimen/_40sdp"/>
+
+    <include
+        android:id="@+id/btn"
+        layout="@layout/field_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etEmail"
+        android:layout_marginTop="@dimen/_20sdp" />
+
+
+
+
+</RelativeLayout>

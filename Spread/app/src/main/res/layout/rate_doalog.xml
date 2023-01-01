@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_dialogue_bg"
+        android:paddingHorizontal="@dimen/_10sdp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/ic_rectangle_line" />
+
+        <TextView
+            android:id="@+id/tvlabel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Rate the advertisement based on how\npopular it made your business."
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/tvlabel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvlabel1"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Cameron Williamson"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"/>
+
+        <RatingBar
+            android:id="@+id/tvRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvlabel2"
+            style="@style/Widget.AppCompat.RatingBar"
+            android:scaleX=".7"
+            android:scaleY=".7"
+            android:rating="0"
+            android:transformPivotX="0dp"
+            android:transformPivotY="0dp"
+            android:max="5"
+            android:progressTint="@color/yellow_shade"
+            android:layout_marginTop="3dp" />
+
+        <RelativeLayout
+            android:id="@+id/rlFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvRating"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:background="@drawable/bg_field">
+
+            <TextView
+                android:id="@+id/tvLeave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_regular"
+                android:text="Leave your feedback"
+                android:textSize="@dimen/_11sdp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etFeedback"
+                android:layout_below="@+id/tvLeave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:hint="Type here"
+                android:minHeight="@dimen/_55sdp"
+                android:textSize="@dimen/_13sdp"
+                android:fontFamily="@font/inter_regular"
+                android:background="@color/white"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"/>
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvSubmit"
+            android:layout_below="@+id/rlFeedback"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_20sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/view_bar"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:padding="@dimen/_12sdp"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

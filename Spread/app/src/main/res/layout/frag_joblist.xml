@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".fragments.Messageconfirm.JoblistFragment">
+
+<include
+    android:id="@+id/topbar"
+    layout="@layout/top_bar_business"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:background="@drawable/bg_field">
+        <TextView
+            android:id="@+id/tvlabel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Protection:"
+            android:fontFamily="@font/inter_regular"
+            android:textColor="#0760F0"/>
+
+        <TextView
+            android:id="@id/tvlabel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Spread guarantees you getting the payment as long as"
+            android:layout_below="@id/tvlabel1"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@id/tvlabel3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="The app takes 20% of every transaction for the services it provides."
+            android:layout_below="@id/tvlabel2"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@id/tvlabel4"
+            android:layout_below="@id/tvlabel3"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_height="wrap_content"
+            android:text="Spread's Cut:"
+            android:fontFamily="@font/inter_regular"
+            android:textColor="#0760F0"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Spread guarantees you getting the payment as long as"
+            android:layout_below="@id/tvlabel4"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="The app takes 20% of every transaction for the services it provides."
+            android:layout_below="@id/tvlabel2"
+            android:textColor="@color/white"/>
+
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rlWaiting"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_group_message" />
+
+        <TextView
+            android:id="@+id/tvlabel3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivClock"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/inter_bold"
+            android:text="No Jobs Yet"
+            android:textColor="#090A0A"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvlabel4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvlabel3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Your job list is empty."
+            android:textSize="@dimen/_10sdp" />
+    </RelativeLayout>
+
+</RelativeLayout>

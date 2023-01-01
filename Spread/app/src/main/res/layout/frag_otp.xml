@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="@dimen/_10sdp"
+    tools:context=".fragments.auth.OtpFragment">
+    <ImageView
+        android:id="@+id/ivBackArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_15ssp"
+        android:src="@drawable/ic_arrow_back_" />
+
+    <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:fontFamily="@font/inter_bold"
+        android:text="Verification Code"
+        android:textColor="#090A0A"
+        android:textSize="@dimen/_20sdp" />
+
+    <TextView
+        android:id="@+id/tvLAbel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLabel"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/inter_regular"
+        android:text="A verification code has been sent to your email."
+        android:textSize="@dimen/_10sdp" />
+
+
+    <com.chaos.view.PinView
+        android:id="@+id/pinview"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLAbel2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:cursorVisible="true"
+        android:inputType="number"
+        android:itemBackground="#F2F4F5"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_25sdp"
+        android:textStyle="bold"
+        app:cursorColor="@color/black"
+        app:hideLineWhenFilled="false"
+        app:itemCount="4"
+        app:itemHeight="@dimen/_50sdp"
+        app:itemRadius="10dp"
+        app:itemSpacing="@dimen/_13sdp"
+        app:itemWidth="@dimen/_50sdp"
+        app:lineColor="#F2F4F5" />
+
+    <TextView
+        android:id="@+id/tvResend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pinview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Resend code"
+        android:textColor="#0760F0"
+        android:fontFamily="@font/inter_semibold" />
+    <include
+        android:id="@+id/btn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        layout="@layout/field_button"
+        android:layout_below="@id/tvResend"
+        android:layout_marginTop="@dimen/_20sdp"/>
+
+
+
+
+</RelativeLayout>

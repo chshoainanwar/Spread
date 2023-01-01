@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivUser"
+            android:visibility="visible"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:src="@drawable/persontwo" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_toEndOf="@+id/ivUser"
+            android:layout_toStartOf="@+id/tvDate"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:maxLines="1"
+            android:text="Jane Cooper"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15sdp" />
+
+        <RatingBar
+            android:id="@+id/tvRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName"
+            style="@style/Widget.AppCompat.RatingBar"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            android:transformPivotX="0dp"
+            android:transformPivotY="0dp"
+            android:isIndicator="true"
+            android:max="5"
+            android:rating="5"
+            android:progressTint="@color/yellow_shade"
+            android:layout_toEndOf="@+id/ivUser" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/inter_regular"
+            android:text="30 Aug 2022"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/time" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_below="@+id/rlTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_regular"
+        android:textSize="@dimen/_12sdp"
+        android:text="qdmkqdkqkqw kd kq mk"/>
+
+    <View
+        android:layout_below="@+id/tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/line1"
+        android:layout_marginVertical="@dimen/_8sdp"/>
+
+</RelativeLayout>

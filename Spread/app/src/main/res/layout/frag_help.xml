@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/_10sdp"
+    tools:context=".fragments.setting.help.HelpFragment">
+
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/top_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rlupper"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_below="@id/topBar"
+        android:background="@drawable/bg_field"
+        android:backgroundTint="#E4EFFF"
+        android:layout_marginTop="@dimen/_20sdp">
+
+
+        <TextView
+            android:id="@+id/tvlabel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact us"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="example@gmail.com"
+            android:textColor="#0760F0"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_20sdp"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCentre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlupper"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Top questions"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/_13sdp"/>
+
+        <RelativeLayout
+            android:id="@+id/rlaccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvQuestion"
+            android:layout_marginTop="@dimen/_10sdp">
+
+
+            <TextView
+                android:id="@+id/tvAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="My account"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_vector_" />
+
+            <View
+                android:id="@+id/viewlineaccount"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tvAccount"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="#E3E5E6" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPayments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlaccount">
+
+
+            <TextView
+                android:id="@+id/tvpayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Payments"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_vector_" />
+
+            <View
+                android:id="@+id/viewlinepayment"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tvpayment"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="#E3E5E6" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlcontract"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlPayments">
+
+
+            <TextView
+                android:id="@+id/tvcontract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Contract"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_vector_" />
+
+            <View
+                android:id="@+id/viewlinecontract"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_below="@id/tvcontract"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="#E3E5E6" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlDispute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlcontract">
+
+
+            <TextView
+                android:id="@+id/tvdispute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Dispute"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_vector_" />
+
+            <View
+                android:id="@+id/viewlinedispute"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_below="@id/tvdispute"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="#E3E5E6" />
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlCentre">
+        <TextView
+            android:id="@+id/tvTopics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Topics"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/_13sdp"/>
+
+        <RelativeLayout
+            android:id="@+id/rlads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTopics"
+            android:layout_marginTop="@dimen/_10sdp">
+
+
+            <TextView
+                android:id="@+id/tvAds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="About Ads"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_vector_" />
+
+            <View
+                android:id="@+id/viewlineads"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tvAds"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="#E3E5E6" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPrivacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlads">
+
+
+            <TextView
+                android:id="@+id/tvPrivacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Privacy"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_vector_" />
+
+            <View
+                android:id="@+id/viewlineprivacy"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tvPrivacy"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="#E3E5E6" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+apply plugin: 'com.android.library'
+
+android {
+  compileSdkVersion 33//COMPILE_SDK_VERSION as int
+
+  defaultConfig {
+    minSdkVersion 24//COMPILE_MIN_SDK_VERSION as int
+    targetSdkVersion 33//COMPILE_SDK_VERSION as int
+//    versionCode VERSION_CODE as int
+//    versionName VERSION_NAME
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+    lint {
+        abortOnError false
+    }
+    namespace 'com.daasuu.camerarecorder'
+
+//  buildToolsVersion BUILD_TOOLS_VERSION
+}
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+}

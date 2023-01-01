@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.setting.contracts.RequestRefundFragment">
+
+   <include
+       android:id="@+id/rlTopBar"
+       layout="@layout/top_bar_business"/>
+
+   <RelativeLayout
+       android:layout_below="@+id/rlTopBar"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="@dimen/_10sdp"
+       android:layout_marginHorizontal="@dimen/_10sdp">
+
+      <TextView
+          android:id="@+id/tvMain"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Request Refund"
+          android:fontFamily="@font/inter_bold"
+          android:textColor="@color/black"
+          android:textSize="@dimen/_15sdp"/>
+
+      <TextView
+          android:id="@+id/tvSelectLabel"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/tvMain"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:text="Select reason."
+          android:textSize="@dimen/_13sdp"
+          android:textColor="@color/black"/>
+
+      <androidx.appcompat.widget.AppCompatCheckBox
+          android:id="@+id/cb1"
+          android:layout_below="@+id/tvSelectLabel"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/_5sdp"
+          android:buttonTint="@color/box_color"
+          android:fontFamily="@font/inter_regular"
+          android:textSize="@dimen/_12sdp"
+          android:text="Influencer did not follow instructions."/>
+
+      <View
+          android:id="@+id/line1"
+          android:layout_below="@+id/cb1"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_1sdp"
+         android:background="@drawable/line"/>
+      <androidx.appcompat.widget.AppCompatCheckBox
+          android:id="@+id/cb2"
+         android:layout_below="@+id/line1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/_5sdp"
+          android:buttonTint="@color/box_color"
+          android:fontFamily="@font/inter_regular"
+          android:textSize="@dimen/_12sdp"
+          android:text="Influencer did not do the advertisement at all."/>
+      <View
+          android:id="@+id/line2"
+          android:layout_below="@+id/cb2"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_1sdp"
+          android:background="@drawable/line"/>
+      <androidx.appcompat.widget.AppCompatCheckBox
+          android:id="@+id/cb3"
+          android:layout_below="@+id/cb2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/_5sdp"
+          android:buttonTint="@color/box_color"
+          android:fontFamily="@font/inter_regular"
+          android:textSize="@dimen/_12sdp"
+          android:text="Influencer is not responding."/>
+
+      <View
+          android:id="@+id/line3"
+          android:layout_below="@+id/cb3"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_1sdp"
+          android:background="@drawable/line"/>
+      <androidx.appcompat.widget.AppCompatCheckBox
+          android:id="@+id/cb4"
+          android:layout_below="@+id/cb3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/_5sdp"
+          android:buttonTint="@color/app_color"
+          android:fontFamily="@font/inter_regular"
+          android:textSize="@dimen/_12sdp"
+          android:checked="true"
+          android:text="Other"/>
+      <View
+          android:id="@+id/line4"
+          android:layout_below="@+id/cb4"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_1sdp"
+          android:background="@drawable/line"/>
+
+      <RelativeLayout
+          android:id="@+id/rlFeedback"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/line4"
+          android:layout_marginTop="@dimen/_15sdp"
+          android:paddingHorizontal="@dimen/_10sdp"
+          android:paddingVertical="@dimen/_10sdp"
+          android:background="@drawable/bg_field">
+
+         <TextView
+             android:id="@+id/tvLeave"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:fontFamily="@font/inter_regular"
+             android:text="Leave your thoughts"
+             android:textSize="@dimen/_11sdp" />
+
+         <androidx.appcompat.widget.AppCompatEditText
+             android:id="@+id/etFeedback"
+             android:layout_below="@+id/tvLeave"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="top"
+             android:hint="Type here"
+             android:minHeight="@dimen/_55sdp"
+             android:textSize="@dimen/_13sdp"
+             android:fontFamily="@font/inter_regular"
+             android:background="@color/white"
+             android:textColor="@color/black"
+             android:textColorHint="@color/black"/>
+      </RelativeLayout>
+   </RelativeLayout>
+
+   <include
+       android:id="@+id/rlSubmit"
+       layout="@layout/field_button"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:layout_marginHorizontal="@dimen/_10sdp"
+       android:layout_marginVertical="@dimen/_20sdp"/>
+
+</RelativeLayout>

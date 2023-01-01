@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_10sdp"
+    tools:context=".fragments.craeteads.CreateAdsFragment">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:elevation="@dimen/_10sdp"
+        android:src="@drawable/ic_arrow_back_"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivBack"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/inter_bold"
+        android:text="Create an Advertisement"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sdp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvCreate"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rlText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:text="It only takes a minute to create one."
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="@dimen/_12sdp"
+                    app:fontFamily="@font/inter_regular" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDescDone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:text="You’re almost done!"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="gone"
+                    app:fontFamily="@font/inter_regular" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlText"
+                android:background="@drawable/bg_field">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/ivImage"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintTextColor="#72777A">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/inter_regular"
+                        android:hint="Title"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:textColor="#090A0A" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:src="@drawable/ic_baseline_visibility_24"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlVideo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_below="@+id/rlField"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="visible">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvPalyerView"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    android:layout_margin="@dimen/_2sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/video2"
+                        android:scaleType="centerCrop"/>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/pause3"
+                        android:layout_gravity="center"/>
+
+                    <androidx.media3.ui.PlayerView
+                        android:id="@+id/videoView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        app:ad_marker_color="@color/purple_700"
+                        app:show_buffering="when_playing"
+                        app:show_shuffle_button="true"
+                        app:use_artwork="true" />
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/ivDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:layout_toRightOf="@+id/cvPalyerView"
+                    android:elevation="@dimen/_10sdp"
+                    android:src="@drawable/iv_delete"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVisit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlVideo"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Will the influencer need to visit you?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp"
+                app:fontFamily="@font/inter_bold" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/rlYesNo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_below="@+id/tvVisit"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvYes"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_yes"
+                    android:gravity="center"
+                    android:text="Yes"
+                    android:textColor="@color/app_color"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvNo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_no"
+                    android:gravity="center"
+                    android:text="No"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.cardview.widget.CardView
+                android:visibility="visible"
+                android:id="@+id/cvRecordVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlYesNo"
+                android:layout_marginTop="@dimen/_30sdp"
+                app:cardCornerRadius="@dimen/_10sdp">
+
+                <RelativeLayout
+                    android:id="@+id/rlRecord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_record1"
+                    android:gravity="center"
+                    android:padding="@dimen/_12sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivRecord"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/record" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvNext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_toRightOf="@+id/ivRecord"
+                        android:text="Record video"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:visibility="visible"
+                android:id="@+id/tvExplain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvRecordVideo"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="Explain your business in 30 seconds."
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                app:fontFamily="@font/inter_medium" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:visibility="gone"
+                android:id="@+id/rlPrices"
+                android:layout_below="@+id/tvExplain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlVideo"
+                    android:text="Price"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    app:fontFamily="@font/inter_bold" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:weightSum="3">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv500"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_yes"
+                        android:gravity="center"
+                        android:text="$500"
+                        android:fontFamily="@font/inter_regular"
+                        android:textColor="@color/app_color"
+                        android:textSize="@dimen/_10sdp"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv1500"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_no"
+                        android:gravity="center"
+                        android:text="$1500"
+                        android:fontFamily="@font/inter_regular"
+                        android:textColor="@color/text_hint_color"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv3000"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_no"
+                        android:gravity="center"
+                        android:text="$3000"
+                        android:fontFamily="@font/inter_regular"
+                        android:textColor="@color/text_hint_color"
+                        android:textSize="@dimen/_10sdp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:weightSum="3">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv5000"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_no"
+                        android:gravity="center"
+                        android:text="$5,000"
+                        android:fontFamily="@font/inter_regular"
+                        android:textColor="@color/text_hint_color"
+                        android:textSize="@dimen/_10sdp"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv10000"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_no"
+                        android:gravity="center"
+                        android:text="$10,000"
+                        android:fontFamily="@font/inter_regular"
+                        android:textColor="@color/text_hint_color"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv20000"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_no"
+                        android:gravity="center"
+                        android:text="$20,000"
+                        android:fontFamily="@font/inter_regular"
+                        android:textColor="@color/text_hint_color"
+                        android:textSize="@dimen/_10sdp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.cardview.widget.CardView
+                android:visibility="gone"
+                android:id="@+id/cvNext"
+                android:layout_below="@+id/rlPrices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                app:cardCornerRadius="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvConfirm"
+                    android:padding="@dimen/_12sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Next"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/inter_bold"
+                    android:gravity="center"
+                    android:background="@color/app_color"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/cvNextPast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_alignParentBottom="true">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:padding="@dimen/_12sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Repost Advertisement"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/inter_bold"
+            android:gravity="center"
+            android:background="@color/app_color" />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

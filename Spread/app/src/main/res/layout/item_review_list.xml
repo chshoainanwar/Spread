@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/sd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivUser"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/persontwo" />
+
+            <TextView
+                android:id="@+id/tvNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_toRightOf="@+id/ivUser"
+                android:text="Cameron Williamson"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/_18sdp" />
+
+
+            <RatingBar
+                android:id="@+id/ratingBar5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:progressTint="@color/yellow_shade"
+                android:rating="2.5"
+                android:secondaryProgressTint="@color/hint_color"
+                android:stepSize="0.5"
+                android:layout_toRightOf="@+id/ivUser"
+                android:layout_below="@+id/tvNumber"/>
+
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/tvDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:text="8 AUG 2022"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/time" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sd"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="Amet minim mollit non deserunt ullamco est sit\n aliqua dolor do amet sint. Velit officia consequat \n duis enim velit mollit. "
+            android:textSize="@dimen/_14sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/viewbar"
+            android:layout_below="@+id/detail"></View>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragments.auth.ProfilePhotoFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:src="@drawable/ic_iv_back" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlContinue"
+        android:layout_below="@+id/ivBack"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/rlImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rlBeforeImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivBeforePic"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/iv_upload_profile"
+                    app:civ_border_color="@color/app_color"
+                    app:civ_border_width="@dimen/_1sdp"
+                    app:civ_circle_background_color="@color/border_color" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPickImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivBeforePic"
+                    android:layout_marginStart="-55dp"
+                    android:layout_marginTop="-30dp"
+                    android:layout_toRightOf="@+id/ivBeforePic"
+                    android:src="@drawable/iv_camera" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlAfterImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivAfterPic"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_165sdp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/iv1" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvDelete"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_below="@+id/ivAfterPic"
+                    android:layout_marginStart="-55dp"
+                    android:layout_marginTop="-60dp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:layout_toRightOf="@+id/ivAfterPic"
+                    android:innerRadius="0dp"
+                    android:shape="ring"
+                    app:cardCornerRadius="75dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/iv_del_blue" />
+
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvUploadLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Upload Profile Photo"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tvUploadLabel"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:text="Make a good first impression."
+            android:textColor="@color/text_hint_color"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal" />
+
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/rlContinue"
+        layout="@layout/field_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"/>
+
+
+</RelativeLayout>
